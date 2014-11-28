@@ -1,17 +1,26 @@
-{
+ db.contacts.insert({
 	"id": 1,
 	"userId" : 1,
 	"firstName" : "Jack",
-	"lastName"  : "Racham"
- }
- {
+	"lastName"  : "Racham",
+	"email"  : "jack.racham@contact.com",
+	"cellPhone"  : "108-555-2020"
+ });
+
+ db.contacts.insert({
 	"id": 2,
 	"userId" : 2,
 	"firstName" : "Ellery",
-	"lastName"  : "Queen"
- },{
+	"lastName"  : "Queen",
+	"email"  : "ellery.queen@contact.com",
+	"cellPhone"  : "208-555-2021"
+ })
+
+db.contacts.insert({
 	"id": 3,
 	"userId" : 3,
 	"firstName" : "Maria",
-	"lastName"  : "Quinn"
- }]
+	"lastName"  : "Quinn",
+	"email"  : "Maria.Quinn@contact.com",
+	"cellPhone"  : "308-555-2023"
+ })

@@ -3,7 +3,9 @@
 <form name='newContact' novalidate class='form-horizontal'>
    <form-field record='contact' field='firstName' required='true' live='false'></form-field>
    <form-field record='contact' field='lastName' required='true' live='false'></form-field>
-   <form-field ng-repeat='(k,v) in contact' record='contact' field={{k}} live='false'></form-field>
+   <form-field record='contact' field='email'   live='false'></form-field>
+   <form-field record='contact' field='cellPhone'   live='false'></form-field>
+   <!--form-field ng-repeat='(k,v) in contact | keyFilter : "firstName" | keyFilter : "lastName"' record='contact' field={{k}} live='false'></form-field-->
 
 	<div class='row form-group'>
 		<div class='col-sm-offset-2'>
