@@ -40,7 +40,7 @@ angular.module('ContactsApp')
           $scope.contact = new Contact.get({id:parseInt($routeParams.id,10)});
           $scope.delete  = function(){
                     console.log('EditController.Delete//Start.......');
-                    $scope.contact.delete();
+                    $scope.contact.$delete();
                     $location.url('/contacts');
                   }; 
    });

@@ -123,15 +123,18 @@ router
                   updContact = updContact.toObject();
                   delete updContact._id;
 
-                  PUser.update(req.dbQuery, updContact,function (err) {
+                  PUser.update(req.dbQuery, updContact,function (err, result) {
                                                                      if (err) 
                                                                          console.log ('Error on Update!'+err);
+                                                                       else 
+                                                                          res.json(result[0]);
                    });
 			  })
         .delete(function(req,res){
                 console.log ('in delete');
-				        db.delete(dbQuery, function(){
-					      res.json(null);
+				        PUser.remove(req.dbQuery, function (err) {
+                                                                     if (err) 
+                                                                         console.log ('Error on Delete!'+err);
   				});
 			});
 //router ....
